@@ -15,9 +15,9 @@ Swinging the phone while walking (흔들며 걷기) <br>
 Walking with the phone in the pocket (주머니에 넣고 걷기) <br>
 
 Key Features
-Collected 4,500 steps of data for each motion at a 50Hz sampling rate. <br>
+Collected 4,000 steps of data for each motion at a 50Hz sampling rate. <br>
 Trained an LSTM model with different time steps, achieving the best performance with a time step of 100. <br>
-Applied 10-fold cross-validation for accuracy assessment.
+Applied 5-fold cross-validation for accuracy assessment.
 
 ## 📊 Results
 The proposed method significantly improves PDR accuracy across different motions compared to traditional step detection methods.
