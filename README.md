@@ -1,30 +1,32 @@
 # Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions
 
-This project aims to improve the accuracy of smartphone-based Pedestrian Dead Reckoning (PDR) systems by utilizing various smartphone sensors and LSTM networks. Our research focuses on maintaining consistent accuracy across different smartphone usage motions.
+This project aims to improve the accuracy of smartphone-based Pedestrian Dead Reckoning (PDR) systems by utilizing various smartphone sensors and LSTM networks. <br>
+Our research focuses on maintaining consistent accuracy across different smartphone usage motions.
 
 ## 📑 Paper Submission
 This research has been submitted to the 2024 Navigation System Conference.
 
 ## 📋 Project Overview
-Pedestrian Dead Reckoning (PDR) systems often suffer from accuracy issues due to varying smartphone usage motions. This project proposes an LSTM-based approach to enhance PDR performance in three distinct motions:
+Pedestrian Dead Reckoning (PDR) systems often suffer from accuracy issues due to varying smartphone usage motions. 
+This project proposes an LSTM-based approach to enhance PDR performance in three distinct motions:
 
-Holding the phone in front (보고 걷기)
-Swinging the phone while walking (흔들며 걷기)
-Walking with the phone in the pocket (주머니에 넣고 걷기)
+Holding the phone in front (보고 걷기) <br>
+Swinging the phone while walking (흔들며 걷기) <br>
+Walking with the phone in the pocket (주머니에 넣고 걷기) <br>
 
 Key Features
-Collected 4,500 steps of data for each motion at a 50Hz sampling rate.
-Trained an LSTM model with different time steps, achieving the best performance with a time step of 100.
+Collected 4,500 steps of data for each motion at a 50Hz sampling rate. <br>
+Trained an LSTM model with different time steps, achieving the best performance with a time step of 100. <br>
 Applied 10-fold cross-validation for accuracy assessment.
 
 ## 📊 Results
 The proposed method significantly improves PDR accuracy across different motions compared to traditional step detection methods.
 
 ## 📂 Repository Structure
-data/: Collected datasets for various motions.
-models/: Pre-trained LSTM models and training scripts.
-notebooks/: Jupyter notebooks for data analysis and visualization.
-src/: Source code for feature preprocessing, model training, and evaluation.
+data/: Collected datasets for various motions. <br> 
+models/: Pre-trained LSTM models and training scripts. <br>
+notebooks/: Jupyter notebooks for data analysis and visualization. <br>
+src/: Source code for feature preprocessing, model training, and evaluation. <br>
 README.md: Project overview and usage instructions.
 
 ## 🚀 Getting Started
