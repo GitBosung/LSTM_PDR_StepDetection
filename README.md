@@ -36,7 +36,7 @@ TensorFlow, NumPy, Pandas, and other dependencies listed in requirements.txt
 Installation
 
 If you use this project in your research, please cite:
-Kim, B., Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions, Navigation System Conference 2024.
+Kim, B., Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions, 2024 IPNT Conference, Nov 6-8 2024, Jeju, Korea
 
 ## 📧 Contact
 For any questions or suggestions, please contact kimbosung1217@gmail.com
