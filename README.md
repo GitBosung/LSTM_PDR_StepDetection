@@ -4,7 +4,7 @@ This project aims to improve the accuracy of smartphone-based Pedestrian Dead Re
 Our research focuses on maintaining consistent accuracy across different smartphone usage motions.
 
 ## 📑 Paper Submission
-This research has been submitted to the 2024 Navigation System Conference.
+This research has been submitted to the 2024 IPNT Conference 
 
 ## 📋 Project Overview
 Pedestrian Dead Reckoning (PDR) systems often suffer from accuracy issues due to varying smartphone usage motions. 
