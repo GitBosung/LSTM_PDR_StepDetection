@@ -1,0 +1,111 @@
+# Enhancing Pedestrian Dead Reckoning (PDR) Using LSTM
+
+This repository contains the code and datasets used in our research on pedestrian dead reckoning (PDR) using Long Short-Term Memory (LSTM) neural networks. The project focuses on accurate step detection and heading estimation for various smartphone usage scenarios, leveraging AI to enhance PDR performance.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Dataset](#dataset)
+- [Model Structure](#model-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Acknowledgments](#acknowledgments)
+- [Citation](#citation)
+
+## Overview
+
+Pedestrian Dead Reckoning (PDR) is a method for estimating a pedestrian's position based on step detection, step length estimation, and heading calculation. Our research enhances this process by using LSTM neural networks to accurately detect steps under various motions, such as:
+
+1. Holding the phone in front (`보고 걷기`)
+2. Swinging the phone while walking (`스윙하면서 걷기`)
+3. Walking with the phone in the pocket (`주머니에 넣고 걷기`)
+
+The model is trained with smartphone sensor data (accelerometer and gyroscope) at a 50Hz sampling rate and tested with different time-steps to optimize performance. This research was supported by the Next-Generation Navigation Laboratory and has been presented as an oral presentation at the **2024 IPNT Conference**, held on Nov 6-8, 2024, in Jeju, Korea.
+
+## Features
+
+- Step detection using LSTM with 10-fold cross-validation.
+- Accurate heading estimation using DCM and quaternion methods.
+- Adaptable to various smartphone usage scenarios.
+- Includes data preprocessing, model training, and evaluation scripts.
+
+## Dataset
+
+The dataset consists of:
+- 4,500 steps per motion type collected over 15 minutes.
+- Sensor data sampled at 50Hz.
+- Additional data collected 10 times for model evaluation.
+
+### Data Structure
+Each dataset includes:
+- **Accelerometer Data**: `ax`, `ay`, `az`
+- **Gyroscope Data**: `gx`, `gy`, `gz`
+- **Labels**: Step events (`1` for a detected step, `0` otherwise)
+
+## Model Structure
+The LSTM model is designed for step detection and consists of:
+- Input layer: Preprocessed sensor data
+- LSTM layers: For sequential data learning
+- Dense layers: For classification
+- Dropout: To prevent overfitting
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/lstm-pdr.git
+   cd lstm-pdr
+   ```
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Data Preprocessing
+Prepare the dataset for training:
+```bash
+python preprocess.py --input <raw_dataset_path> --output <processed_dataset_path>
+```
+
+### Model Training
+Train the LSTM model:
+```bash
+python train.py --data <processed_dataset_path> --epochs 50 --batch_size 64
+```
+
+### Evaluation
+Evaluate the trained model on test data:
+```bash
+python evaluate.py --model <model_path> --test_data <test_dataset_path>
+```
+
+## Results
+
+- **Step Detection Accuracy**: Achieved an accuracy of 95% in cross-validation.
+- **Heading Estimation**: Improved heading estimation using quaternion-based corrections.
+- **Motion Adaptability**: Successfully tested on unseen user data.
+
+## Acknowledgments
+
+This research was conducted with the support of the **Next-Generation Navigation Laboratory** and was presented at the **2024 IPNT Conference** as an oral presentation. We gratefully acknowledge their guidance and resources, which were instrumental in completing this work.
+
+## Citation
+
+If you use this repository for your research, please cite our work:
+
+```
+@article{
+Kim, B., Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions, 2024 IPNT Conference, Nov 6-8 2024, Jeju, Korea
+}
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
